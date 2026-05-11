@@ -27,15 +27,15 @@
   <link rel="icon" type="image/png" href="assets/logos/vidisa-isotipo.png">
   <link rel="apple-touch-icon" href="assets/logos/vidisa-isotipo.png">
 
-  <!-- Fonts -->
+  <!-- Fonts: Bricolage Grotesque (display industrial) + Inter (cuerpo) + JetBrains Mono (detalles) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Schema.org Structured Data - Local Business -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,7 +85,7 @@
           <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
           <li><a href="#servicios" class="nav-link">Servicios</a></li>
           <li><a href="#valores" class="nav-link">Valores</a></li>
-          <li><a href="#cobertura" class="nav-link">Cobertura</a></li>
+          <li><a href="#talcahuano" class="nav-link">Talcahuano</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
         <a href="https://wa.me/56961258314?text=Hola%20VIDISA%2C%20me%20interesa%20cotizar%20un%20traslado." class="btn btn--whatsapp" target="_blank" rel="noopener">
@@ -171,6 +171,7 @@
       <div class="container">
         <header class="section-header">
           <span class="section-number">01</span>
+          <div class="section-header__divider"></div>
           <span class="section-label">Nuestra historia</span>
         </header>
 
@@ -189,20 +190,29 @@
             <div class="generations">
               <article class="generation">
                 <span class="generation__number">I</span>
-                <h3 class="generation__title">El abuelo</h3>
-                <p>Pionero familiar en el rubro del transporte. El primero en subirse a un camión con la idea de mover carga ajena con la responsabilidad de carga propia.</p>
+                <div class="generation__body">
+                  <span class="generation__role">Primera generación</span>
+                  <h3 class="generation__name">Juan Díaz Jiles</h3>
+                  <p>El abuelo. Pionero familiar en el rubro del transporte. El primero en subirse a un camión con la idea de mover carga ajena con la responsabilidad de carga propia. Donde empezó todo.</p>
+                </div>
               </article>
 
               <article class="generation">
                 <span class="generation__number">II</span>
-                <h3 class="generation__title">El padre</h3>
-                <p>Heredó la operación, mantuvo el oficio activo y crio a la siguiente generación entre patios, puertos y motores.</p>
+                <div class="generation__body">
+                  <span class="generation__role">Segunda generación</span>
+                  <h3 class="generation__name">Víctor Díaz Torres</h3>
+                  <p>El padre. Heredó la operación, mantuvo el oficio activo y crio a la siguiente generación entre patios, puertos y motores. Hoy sigue operando a la par con su hijo.</p>
+                </div>
               </article>
 
-              <article class="generation">
+              <article class="generation generation--current">
                 <span class="generation__number">III</span>
-                <h3 class="generation__title">Víctor Díaz Salas</h3>
-                <p>Decide formalizar lo que aprendió de cuna. Funda VIDISA — sus iniciales — y empieza a operar a la par con su padre, con un Mercedes-Benz 1621 del 91 como primer camión.</p>
+                <div class="generation__body">
+                  <span class="generation__role">Tercera generación · Hoy</span>
+                  <h3 class="generation__name">Víctor Díaz Salas</h3>
+                  <p>El hijo. Decide formalizar lo que aprendió de cuna. Funda <strong>VIDISA</strong> — sus iniciales — y empieza a operar a la par con su padre, con un Mercedes-Benz 1621 del 91 como primer camión.</p>
+                </div>
               </article>
             </div>
 
@@ -222,6 +232,7 @@
       <div class="container">
         <header class="section-header">
           <span class="section-number">02</span>
+          <div class="section-header__divider"></div>
           <span class="section-label">Lo que hacemos</span>
         </header>
 
@@ -292,6 +303,7 @@
       <div class="container">
         <header class="section-header section-header--light">
           <span class="section-number">03</span>
+          <div class="section-header__divider"></div>
           <span class="section-label">Lo que nos define</span>
         </header>
 
@@ -343,54 +355,85 @@
       </div>
     </section>
 
-    <!-- =============== COBERTURA =============== -->
-    <section class="coverage" id="cobertura">
+    <!-- =============== TALCAHUANO =============== -->
+    <section class="talcahuano" id="talcahuano">
       <div class="container">
         <header class="section-header">
           <span class="section-number">04</span>
-          <span class="section-label">Dónde operamos</span>
+          <div class="section-header__divider"></div>
+          <span class="section-label">Nuestra ciudad</span>
         </header>
 
-        <div class="coverage__grid">
-          <div class="coverage__intro">
-            <h2 class="section-title">
-              Operamos en la <em>Región del Biobío.</em>
-            </h2>
-            <p class="lead-paragraph">
-              Conocemos cada puerto, cada depósito y cada ruta de la zona portuaria del Biobío. Trabajamos con la cercanía de quien vive el territorio y la profesionalidad de quien lo recorre todos los días.
-            </p>
-            <p class="coverage__future">
-              <span class="eyebrow">Próxima expansión —</span>
-              Cobertura ampliada a nivel nacional con nuestra flota propia.
-            </p>
-          </div>
+        <div class="talcahuano__intro">
+          <h2 class="section-title">
+            Talcahuano — <em>donde el Biobío</em> respira el océano.
+          </h2>
+          <p class="lead-paragraph">
+            Operamos desde el corazón portuario del Biobío. Talcahuano no es solo nuestra base: es la ciudad donde tres generaciones aprendimos el oficio entre grúas, contenedores y el ritmo del mar.
+          </p>
+        </div>
 
+        <!-- Mosaico de imágenes de Talcahuano -->
+        <div class="talcahuano__gallery">
+          <figure class="gallery-item gallery-item--large">
+            <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1200&q=80&auto=format&fit=crop" alt="Puerto de Talcahuano - vista panorámica" loading="lazy">
+            <figcaption>
+              <span class="gallery-item__tag">Puerto San Vicente</span>
+              <p>El principal corredor portuario de la región — donde se mueve el comercio del Biobío.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1494412651409-8dd6494a8190?w=800&q=80&auto=format&fit=crop" alt="Contenedores en puerto" loading="lazy">
+            <figcaption>
+              <span class="gallery-item__tag">Patio de contenedores</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=800&q=80&auto=format&fit=crop" alt="Operación portuaria Talcahuano" loading="lazy">
+            <figcaption>
+              <span class="gallery-item__tag">Bahía de Talcahuano</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1571727153934-b9e0059b7ab2?w=800&q=80&auto=format&fit=crop" alt="Grúa portuaria moviendo contenedor" loading="lazy">
+            <figcaption>
+              <span class="gallery-item__tag">Operación diaria</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Puertos de cobertura -->
+        <div class="ports-section">
+          <h3 class="ports-section__title">Puertos donde operamos</h3>
           <ul class="ports-list">
             <li class="port port--primary">
               <span class="port__indicator"></span>
               <div>
-                <h3 class="port__name">Talcahuano</h3>
+                <h4 class="port__name">Talcahuano</h4>
                 <p class="port__role">Base de operaciones</p>
               </div>
             </li>
             <li class="port">
               <span class="port__indicator"></span>
               <div>
-                <h3 class="port__name">Puerto San Vicente</h3>
+                <h4 class="port__name">Puerto San Vicente</h4>
                 <p class="port__role">Operación activa diaria</p>
               </div>
             </li>
             <li class="port">
               <span class="port__indicator"></span>
               <div>
-                <h3 class="port__name">Puerto Lirquén</h3>
+                <h4 class="port__name">Puerto Lirquén</h4>
                 <p class="port__role">Cobertura</p>
               </div>
             </li>
             <li class="port">
               <span class="port__indicator"></span>
               <div>
-                <h3 class="port__name">Puerto Coronel</h3>
+                <h4 class="port__name">Puerto Coronel</h4>
                 <p class="port__role">Cobertura</p>
               </div>
             </li>
@@ -404,6 +447,7 @@
       <div class="container">
         <header class="section-header">
           <span class="section-number">05</span>
+          <div class="section-header__divider"></div>
           <span class="section-label">Hablemos</span>
         </header>
 
@@ -470,7 +514,7 @@
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#valores">Valores</a></li>
-            <li><a href="#cobertura">Cobertura</a></li>
+            <li><a href="#talcahuano">Talcahuano</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>

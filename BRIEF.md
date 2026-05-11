@@ -31,9 +31,9 @@
 
 VIDISA nace como continuación de un legado de tres generaciones de transportistas:
 
-1. **Primera generación:** El abuelo, pionero familiar en el rubro del transporte con camiones.
-2. **Segunda generación:** El padre, que heredó la operación y mantuvo el oficio activo.
-3. **Tercera generación:** Víctor Díaz Salas, quien decide formalizar la operación bajo su propio nombre y empezar a operar a la par con su padre.
+1. **Primera generación — Juan Díaz Jiles (el abuelo):** Pionero familiar en el rubro del transporte con camiones. Donde empezó todo.
+2. **Segunda generación — Víctor Díaz Torres (el padre):** Heredó la operación, mantuvo el oficio activo y crio a la siguiente generación entre patios y motores. Hoy sigue operando a la par con su hijo.
+3. **Tercera generación — Víctor Díaz Salas (el hijo):** Decide formalizar lo que aprendió de cuna. Funda VIDISA bajo sus iniciales y empieza a operar a la par con su padre.
 
 Esta herencia es **el principal activo de marca** y debe estar presente en toda la comunicación. No es un dato decorativo: es el diferencial que ningún competidor pequeño puede replicar.
 

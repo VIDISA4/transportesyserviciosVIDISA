@@ -1,7 +1,6 @@
 /* =================================================================
-   VIDISA TRANSPORTES Y SERVICIOS — Stylesheet
-   Aesthetic: Editorial / Industrial Heritage
-   Author: VIDISA · 2026
+   VIDISA TRANSPORTES Y SERVICIOS — Stylesheet v2
+   Aesthetic: Industrial Heritage
    ================================================================= */
 
 /* ===================== TOKENS ===================== */
@@ -27,10 +26,10 @@
   --whatsapp: #25D366;
   --whatsapp-dark: #1da851;
 
-  /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+  /* Typography — Bricolage Grotesque for industrial heritage feel */
+  --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
 
   /* Spacing scale */
   --space-3xs: 0.25rem;
@@ -144,17 +143,17 @@ button {
 /* ===================== TYPOGRAPHY ===================== */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.75rem);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
   color: var(--black);
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 96;
 }
 
 .section-title em {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--vidisa-red);
 }
 
@@ -247,7 +246,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 88px; /* Más alto para acomodar logo grande */
 }
 
 .header__logo {
@@ -257,13 +256,13 @@ button {
 }
 
 .header__logo-img {
-  height: 38px;
+  height: 60px; /* LOGO MÁS GRANDE — de 38px a 60px */
   width: auto;
   transition: transform var(--transition-fast);
 }
 
 .header__logo:hover .header__logo-img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .header__nav {
@@ -339,7 +338,7 @@ button {
 /* ===================== HERO ===================== */
 .hero {
   position: relative;
-  padding-top: calc(72px + var(--space-2xl));
+  padding-top: calc(88px + var(--space-2xl));
   padding-bottom: var(--space-xl);
   overflow: hidden;
   background:
@@ -360,21 +359,20 @@ button {
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  font-weight: 600;
+  font-size: clamp(2.75rem, 7.5vw, 6rem);
+  font-weight: 700;
   line-height: 0.98;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   color: var(--black);
   margin: 1.5rem 0 1.5rem;
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 96;
   animation: fadeUp 0.8s var(--transition-slow) backwards;
 }
 
 .hero__title em {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--vidisa-red);
-  font-variation-settings: "opsz" 144;
 }
 
 .hero__lead {
@@ -420,9 +418,10 @@ button {
 
 .meta-item__value {
   font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--black);
+  letter-spacing: -0.01em;
 }
 
 /* Hero Visual */
@@ -434,7 +433,7 @@ button {
 .hero__visual-frame {
   position: relative;
   background:
-    linear-gradient(135deg, transparent 0%, rgba(166, 13, 40, 0.03) 100%),
+    linear-gradient(135deg, transparent 0%, rgba(166, 13, 40, 0.04) 100%),
     var(--cream);
   padding: 2.5rem 1.5rem;
   border: 1px solid var(--gray-100);
@@ -444,21 +443,21 @@ button {
 .hero__visual-frame::after {
   content: '';
   position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--vidisa-red);
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--vidisa-red);
 }
 
 .hero__visual-frame::before {
-  top: -1px;
-  left: -1px;
+  top: -2px;
+  left: -2px;
   border-right: none;
   border-bottom: none;
 }
 
 .hero__visual-frame::after {
-  bottom: -1px;
-  right: -1px;
+  bottom: -2px;
+  right: -2px;
   border-left: none;
   border-top: none;
 }
@@ -471,14 +470,14 @@ button {
 
 .hero__visual-tag {
   position: absolute;
-  top: -12px;
+  top: -14px;
   right: 1.5rem;
   background: var(--paper);
-  padding: 0 0.75rem;
+  padding: 0 0.875rem;
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   color: var(--vidisa-red);
 }
 
@@ -501,7 +500,7 @@ button {
   white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gray-700);
@@ -515,49 +514,53 @@ button {
   to { transform: translateX(-50%); }
 }
 
-/* ===================== SECTION HEADER ===================== */
+/* ===================== SECTION HEADER — MUCHO MÁS PROMINENTE ===================== */
 .section-header {
   display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  margin-bottom: var(--space-md);
-  font-family: var(--font-mono);
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .section-number {
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem); /* MÁS GRANDE — antes era 0.875rem */
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
   color: var(--vidisa-red);
+  font-variation-settings: "opsz" 96;
+  flex-shrink: 0;
+}
+
+.section-header__divider {
+  width: 60px;
+  height: 1px;
+  background: var(--vidisa-red);
+  flex-shrink: 0;
 }
 
 .section-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gray-700);
-  position: relative;
-  padding-left: 1.25rem;
 }
 
-.section-label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 1px;
-  background: var(--gray-300);
+.section-header--light {
+  border-bottom-color: var(--gray-900);
 }
 
 .section-header--light .section-label {
   color: var(--gray-300);
 }
 
-.section-header--light .section-label::before {
-  background: var(--gray-700);
+.section-header--light .section-header__divider {
+  background: var(--vidisa-red-light);
 }
 
 /* ===================== ABOUT ===================== */
@@ -577,7 +580,7 @@ button {
 }
 
 .about__content {
-  max-width: 780px;
+  max-width: 820px;
 }
 
 .lead-paragraph strong {
@@ -585,52 +588,82 @@ button {
   font-weight: 600;
 }
 
-/* Generations */
+/* Generations — Updated with role and name structure */
 .generations {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
+  gap: 0;
   margin: var(--space-xl) 0;
   padding: var(--space-lg) 0;
-  border-top: 1px solid var(--gray-100);
-  border-bottom: 1px solid var(--gray-100);
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
 }
 
 .generation {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: start;
-  padding: 1.5rem 0;
-  border-top: 1px dashed var(--gray-100);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--gray-100);
+  transition: all var(--transition-fast);
 }
 
 .generation:first-child {
   border-top: none;
-  padding-top: 0;
+  padding-top: var(--space-md);
 }
 
 .generation:last-child {
-  padding-bottom: 0;
+  padding-bottom: var(--space-md);
+}
+
+.generation--current {
+  background: linear-gradient(90deg, rgba(166, 13, 40, 0.02), transparent);
+  padding-left: 1rem;
+  margin-left: -1rem;
 }
 
 .generation__number {
   font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 400;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
   font-style: italic;
-  line-height: 1;
+  line-height: 0.9;
   color: var(--vidisa-red);
-  font-variation-settings: "opsz" 144;
-  min-width: 4rem;
+  font-variation-settings: "opsz" 96;
+  min-width: 4.5rem;
+  letter-spacing: -0.04em;
 }
 
-.generation__title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
+.generation__body {
+  max-width: 60ch;
+}
+
+.generation__role {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
   font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-500);
   margin-bottom: 0.5rem;
+}
+
+.generation--current .generation__role {
+  color: var(--vidisa-red);
+}
+
+.generation__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.625rem;
   color: var(--black);
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 48;
 }
 
 .generation p {
@@ -639,12 +672,17 @@ button {
   max-width: 60ch;
 }
 
+.generation p strong {
+  color: var(--vidisa-red);
+  font-weight: 700;
+}
+
 /* Mission Quote */
 .mission-quote {
   margin-top: var(--space-xl);
   padding: var(--space-lg);
   background: var(--cream);
-  border-left: 3px solid var(--vidisa-red);
+  border-left: 4px solid var(--vidisa-red);
   position: relative;
 }
 
@@ -652,24 +690,24 @@ button {
   font-family: var(--font-display);
   font-size: clamp(1.125rem, 1.8vw, 1.4375rem);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
   color: var(--black);
   margin-bottom: 1rem;
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 48;
 }
 
 .mission-quote strong {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--vidisa-red);
 }
 
 .mission-quote cite {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gray-700);
   font-style: normal;
@@ -729,18 +767,20 @@ button {
   right: var(--space-lg);
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.15em;
   color: var(--gray-500);
 }
 
 .service-card__title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.625rem;
+  font-weight: 700;
   margin-bottom: 0.625rem;
   color: var(--black);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 48;
 }
 
 .service-card p {
@@ -799,13 +839,15 @@ button {
 }
 
 .value__num {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.03em;
   color: var(--vidisa-red);
-  padding-top: 0.625rem;
-  min-width: 3rem;
+  padding-top: 0.25rem;
+  min-width: 3.5rem;
 }
 
 .value__body {
@@ -814,12 +856,13 @@ button {
 
 .value__title {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 600;
-  line-height: 1.15;
+  font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.1;
   margin-bottom: 0.75rem;
   color: var(--paper);
-  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 48;
   transition: color var(--transition-fast);
 }
 
@@ -833,35 +876,100 @@ button {
   font-size: 1rem;
 }
 
-/* ===================== COVERAGE ===================== */
-.coverage {
+/* ===================== TALCAHUANO SECTION ===================== */
+.talcahuano {
   padding: var(--space-3xl) 0;
   background: var(--paper);
 }
 
-.coverage__grid {
+.talcahuano__intro {
+  max-width: 880px;
+  margin-bottom: var(--space-xl);
+}
+
+.talcahuano__intro .section-title {
+  margin-bottom: var(--space-md);
+  max-width: 20ch;
+}
+
+/* Gallery Mosaic */
+.talcahuano__gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
-  align-items: start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
 }
 
-.coverage__intro .section-title {
-  margin-bottom: var(--space-md);
-  max-width: 18ch;
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-100);
+  aspect-ratio: 4 / 3;
 }
 
-.coverage__future {
-  margin-top: var(--space-md);
-  padding-top: var(--space-md);
+.gallery-item--large {
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+  filter: contrast(1.05) saturate(0.95);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(0deg, rgba(15, 13, 12, 0.85) 0%, rgba(15, 13, 12, 0) 100%);
+  color: var(--paper);
+}
+
+.gallery-item__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vidisa-red-light);
+  margin-bottom: 0.375rem;
+  background: rgba(15, 13, 12, 0.5);
+  padding: 0.25rem 0.625rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.gallery-item figcaption p {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 40ch;
+}
+
+/* Ports section dentro de Talcahuano */
+.ports-section {
+  padding-top: var(--space-xl);
   border-top: 1px solid var(--gray-100);
-  font-size: 0.9375rem;
-  color: var(--gray-700);
 }
 
-.coverage__future .eyebrow {
-  color: var(--vidisa-red);
-  margin-right: 0.5rem;
+.ports-section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: var(--space-lg);
+  color: var(--black);
+  letter-spacing: -0.02em;
 }
 
 .ports-list {
@@ -873,7 +981,7 @@ button {
 .port {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   padding: 1.5rem 0;
   border-top: 1px solid var(--gray-100);
   transition: padding var(--transition-fast);
@@ -888,8 +996,8 @@ button {
 }
 
 .port__indicator {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: var(--gray-300);
   border-radius: 50%;
   flex-shrink: 0;
@@ -903,7 +1011,7 @@ button {
 .port--primary .port__indicator::before {
   content: '';
   position: absolute;
-  inset: -6px;
+  inset: -8px;
   border: 1px solid var(--vidisa-red);
   border-radius: 50%;
   opacity: 0.3;
@@ -917,17 +1025,18 @@ button {
 
 .port__name {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: var(--black);
   margin-bottom: 0.125rem;
+  letter-spacing: -0.01em;
 }
 
 .port__role {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gray-500);
 }
@@ -945,7 +1054,7 @@ button {
 
 .contact .section-title {
   margin-bottom: var(--space-md);
-  max-width: 16ch;
+  max-width: 18ch;
 }
 
 .contact__lead {
@@ -1016,7 +1125,7 @@ button {
 .contact-card__title {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--gray-500);
@@ -1025,10 +1134,11 @@ button {
 
 .contact-card__value {
   font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.375rem;
+  font-weight: 700;
   color: var(--black);
   margin-bottom: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .contact-card__cta {
@@ -1044,17 +1154,18 @@ button {
 
 .contact__signature {
   padding: var(--space-md);
-  border-left: 2px solid var(--vidisa-red);
+  border-left: 3px solid var(--vidisa-red);
   font-size: 0.9375rem;
   color: var(--gray-900);
   line-height: 1.7;
+  background: var(--paper);
 }
 
 .contact__signature strong {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--black);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
 }
 
 /* ===================== FOOTER ===================== */
@@ -1077,7 +1188,7 @@ button {
 }
 
 .site-footer__logo {
-  height: 42px;
+  height: 56px; /* Más grande también en footer */
   width: auto;
   margin-bottom: 1rem;
   filter: brightness(0) invert(1);
@@ -1087,7 +1198,8 @@ button {
 .site-footer__tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: var(--gray-300);
   line-height: 1.5;
 }
@@ -1095,8 +1207,8 @@ button {
 .site-footer__heading {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--vidisa-red);
   margin-bottom: 1rem;
@@ -1130,8 +1242,9 @@ button {
 }
 
 .site-footer__est {
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   color: var(--vidisa-red);
+  font-weight: 600;
 }
 
 /* ===================== FLOATING WHATSAPP ===================== */
@@ -1207,20 +1320,28 @@ button {
 
   .about__intro {
     position: sticky;
-    top: 100px;
+    top: 120px;
   }
 
   .services__grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .coverage__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
-  }
-
   .contact__methods {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Gallery mosaic — desktop */
+  .talcahuano__gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: var(--space-sm);
+  }
+
+  .gallery-item--large {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    aspect-ratio: 4 / 3;
   }
 
   .site-footer__grid {
@@ -1244,6 +1365,18 @@ button {
 @media (max-width: 900px) {
   .nav-toggle {
     display: flex;
+  }
+
+  .header__logo-img {
+    height: 48px; /* Un poco más chico en móvil pero aún grande */
+  }
+
+  .header__inner {
+    height: 76px;
+  }
+
+  .hero {
+    padding-top: calc(76px + var(--space-xl));
   }
 
   .header__nav {
