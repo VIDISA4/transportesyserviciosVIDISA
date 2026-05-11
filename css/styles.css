@@ -133,6 +133,14 @@ button {
   color: var(--vidisa-red);
 }
 
+.eyebrow--light {
+  color: var(--paper);
+}
+
+.eyebrow--light .eyebrow__line {
+  background: var(--vidisa-red-light);
+}
+
 .eyebrow__line {
   display: inline-block;
   width: 32px;
@@ -787,6 +795,97 @@ button {
   color: var(--gray-900);
   font-size: 0.9375rem;
   line-height: 1.6;
+}
+
+/* ===================== SHOWCASE — Foto real protagonista ===================== */
+.showcase {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--black);
+}
+
+.showcase__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.showcase__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.showcase__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(15, 13, 12, 0.2) 0%, rgba(15, 13, 12, 0.85) 80%, rgba(15, 13, 12, 0.95) 100%),
+    linear-gradient(90deg, rgba(15, 13, 12, 0.4) 0%, rgba(15, 13, 12, 0.1) 100%);
+}
+
+.showcase__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  color: var(--paper);
+  padding-top: var(--space-2xl);
+}
+
+.showcase__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--paper);
+  margin: 1rem 0 1.25rem;
+  font-variation-settings: "opsz" 96;
+}
+
+.showcase__title em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--vidisa-red-light);
+}
+
+.showcase__text {
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  line-height: 1.6;
+  color: var(--gray-300);
+  max-width: 56ch;
+}
+
+/* Borde rojo decorativo arriba */
+.showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--vidisa-red);
+  z-index: 2;
+}
+
+/* Borde rojo decorativo abajo */
+.showcase::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--vidisa-red), transparent);
+  z-index: 2;
 }
 
 /* ===================== VALUES (DARK SECTION) ===================== */
