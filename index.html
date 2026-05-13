@@ -401,7 +401,12 @@
         <!-- Imagen destacada del Puerto + datos clave -->
         <div class="port-feature">
           <figure class="port-feature__image">
-            <img src="assets/images/puerto-san-vicente.jpg" alt="Vista aérea del Puerto San Vicente con grúas portuarias, contenedores y barco MAERSK atracado" loading="lazy">
+            <img
+              src="assets/images/puerto-san-vicente.jpg"
+              srcset="assets/images/puerto-san-vicente-medium.jpg 1400w, assets/images/puerto-san-vicente.jpg 2000w"
+              sizes="(max-width: 767px) 100vw, 60vw"
+              alt="Vista aérea panorámica del Puerto San Vicente con barco MAERSK LINE atracado, grúas portuarias azules y patio de contenedores en Talcahuano"
+              loading="lazy">
             <figcaption>
               <span class="port-feature__tag">Puerto San Vicente · Talcahuano</span>
             </figcaption>
@@ -428,6 +433,22 @@
               </div>
             </dl>
           </aside>
+        </div>
+
+        <!-- Galería complementaria con fotos reales -->
+        <div class="fleet-gallery">
+          <h3 class="fleet-gallery__title">La flota en operación</h3>
+          <p class="fleet-gallery__lead">Nuestros camiones Mercedes-Benz operando en el puerto, todos los días.</p>
+
+          <div class="fleet-gallery__grid">
+            <figure class="fleet-photo">
+              <img src="assets/images/camiones-frontal-medium.jpg" alt="Tres camiones Mercedes-Benz de VIDISA vistos de frente en el puerto" loading="lazy">
+            </figure>
+
+            <figure class="fleet-photo">
+              <img src="assets/images/operacion-puerto-medium.jpg" alt="Flota VIDISA junto a contenedores apilados en el puerto" loading="lazy">
+            </figure>
+          </div>
         </div>
 
         <!-- Puertos de cobertura -->

@@ -1009,20 +1009,24 @@ button {
   grid-template-columns: 1fr;
   gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
-  align-items: stretch;
+  align-items: start; /* Cada item respeta su altura natural, sin estirarse */
 }
 
 .port-feature__image {
   position: relative;
   overflow: hidden;
   background: var(--gray-100);
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 2 / 1; /* Panorámico - perfecto para foto del puerto */
+  min-width: 0; /* CRÍTICO: previene overflow en CSS Grid */
+  width: 100%;
+  max-width: 100%;
 }
 
 .port-feature__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform var(--transition-slow);
   filter: contrast(1.05) saturate(1.05);
 }
@@ -1055,8 +1059,11 @@ button {
 .port-feature__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: var(--space-md) 0;
+  min-width: 0; /* CRÍTICO: previene overflow en CSS Grid */
+  width: 100%;
+  max-width: 100%;
 }
 
 .port-feature__title {
@@ -1116,6 +1123,56 @@ button {
   font-weight: 600;
   color: var(--black);
   letter-spacing: -0.01em;
+}
+
+/* ===================== FLEET GALLERY — Fotos reales de la flota ===================== */
+.fleet-gallery {
+  margin-bottom: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--gray-100);
+}
+
+.fleet-gallery__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.fleet-gallery__lead {
+  font-size: 1rem;
+  color: var(--gray-700);
+  margin-bottom: var(--space-lg);
+  max-width: 56ch;
+}
+
+.fleet-gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.fleet-photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--gray-100);
+  aspect-ratio: 16 / 9;
+}
+
+.fleet-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+  filter: contrast(1.05) saturate(1.02);
+}
+
+.fleet-photo:hover img {
+  transform: scale(1.04);
 }
 
 /* Ports section dentro de Talcahuano */
@@ -1495,8 +1552,15 @@ button {
 
   /* Port Feature — desktop layout */
   .port-feature {
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.3fr 1fr;
     gap: var(--space-xl);
+    align-items: start;
+  }
+
+  /* Fleet Gallery — 2 columns en desktop */
+  .fleet-gallery__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
   }
 
   .site-footer__grid {
