@@ -476,19 +476,6 @@ button {
   margin: 0 auto;
 }
 
-.hero__visual-tag {
-  position: absolute;
-  top: -14px;
-  right: 1.5rem;
-  background: var(--paper);
-  padding: 0 0.875rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  color: var(--vidisa-red);
-}
-
 /* Hero Marquee */
 .hero__marquee {
   margin-top: var(--space-xl);
@@ -534,7 +521,7 @@ button {
 
 .section-number {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 3.5rem); /* MÁS GRANDE — antes era 0.875rem */
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -544,19 +531,20 @@ button {
 }
 
 .section-header__divider {
-  width: 60px;
-  height: 1px;
+  width: 48px;
+  height: 2px;
   background: var(--vidisa-red);
   flex-shrink: 0;
 }
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  font-size: clamp(1.0625rem, 1.6vw, 1.375rem); /* MÁS GRANDE — antes 0.875rem */
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gray-700);
+  color: var(--black);
+  line-height: 1.2;
 }
 
 .section-header--light {
@@ -564,7 +552,7 @@ button {
 }
 
 .section-header--light .section-label {
-  color: var(--gray-300);
+  color: var(--paper); /* Blanco en sección oscura para máximo contraste */
 }
 
 .section-header--light .section-header__divider {
@@ -1125,54 +1113,77 @@ button {
   letter-spacing: -0.01em;
 }
 
-/* ===================== FLEET GALLERY — Fotos reales de la flota ===================== */
-.fleet-gallery {
+/* ===================== FLEET FEATURE — Foto grande con caption sobre la imagen ===================== */
+.fleet-feature-wrapper {
   margin-bottom: var(--space-2xl);
   padding-top: var(--space-xl);
   border-top: 1px solid var(--gray-100);
 }
 
-.fleet-gallery__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--black);
-  margin-bottom: 0.5rem;
-}
-
-.fleet-gallery__lead {
-  font-size: 1rem;
-  color: var(--gray-700);
-  margin-bottom: var(--space-lg);
-  max-width: 56ch;
-}
-
-.fleet-gallery__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-sm);
-}
-
-.fleet-photo {
+.fleet-feature {
   position: relative;
   overflow: hidden;
-  background: var(--gray-100);
+  background: var(--black);
   aspect-ratio: 16 / 9;
+  max-height: 720px;
 }
 
-.fleet-photo img {
+.fleet-feature img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform var(--transition-slow);
-  filter: contrast(1.05) saturate(1.02);
+  transition: transform 1.2s var(--transition-slow);
+  filter: contrast(1.05) saturate(1.05);
 }
 
-.fleet-photo:hover img {
-  transform: scale(1.04);
+.fleet-feature:hover img {
+  transform: scale(1.03);
+}
+
+.fleet-feature__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  background: linear-gradient(0deg,
+    rgba(15, 13, 12, 0.92) 0%,
+    rgba(15, 13, 12, 0.6) 60%,
+    rgba(15, 13, 12, 0) 100%);
+  color: var(--paper);
+}
+
+.fleet-feature__tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--vidisa-red);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.fleet-feature__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin-bottom: 0.625rem;
+  max-width: 28ch;
+  font-variation-settings: "opsz" 96;
+}
+
+.fleet-feature__text {
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  line-height: 1.55;
+  color: rgba(237, 231, 223, 0.9);
+  max-width: 56ch;
 }
 
 /* Ports section dentro de Talcahuano */
@@ -1557,10 +1568,9 @@ button {
     align-items: start;
   }
 
-  /* Fleet Gallery — 2 columns en desktop */
-  .fleet-gallery__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+  /* Fleet Feature — caption con más padding en desktop */
+  .fleet-feature__caption {
+    padding: var(--space-xl);
   }
 
   .site-footer__grid {

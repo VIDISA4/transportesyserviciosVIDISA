@@ -141,7 +141,6 @@
             <div class="hero__visual-frame">
               <img src="assets/logos/vidisa-isotipo.png" alt="Camión Mercedes-Benz 1621 con contenedor VIDISA" class="hero__visual-img">
             </div>
-            <span class="hero__visual-tag">EST. 2024</span>
           </div>
         </div>
       </div>
@@ -435,20 +434,21 @@
           </aside>
         </div>
 
-        <!-- Galería complementaria con fotos reales -->
-        <div class="fleet-gallery">
-          <h3 class="fleet-gallery__title">La flota en operación</h3>
-          <p class="fleet-gallery__lead">Nuestros camiones Mercedes-Benz operando en el puerto, todos los días.</p>
-
-          <div class="fleet-gallery__grid">
-            <figure class="fleet-photo">
-              <img src="assets/images/camiones-frontal-medium.jpg" alt="Tres camiones Mercedes-Benz de VIDISA vistos de frente en el puerto" loading="lazy">
-            </figure>
-
-            <figure class="fleet-photo">
-              <img src="assets/images/operacion-puerto-medium.jpg" alt="Flota VIDISA junto a contenedores apilados en el puerto" loading="lazy">
-            </figure>
-          </div>
+        <!-- Foto destacada de la flota en operación -->
+        <div class="fleet-feature-wrapper">
+          <figure class="fleet-feature">
+            <img
+              src="assets/images/camiones-frontal.jpg"
+              srcset="assets/images/camiones-frontal-medium.jpg 1000w, assets/images/camiones-frontal.jpg 1600w"
+              sizes="(max-width: 767px) 100vw, 90vw"
+              alt="Tres camiones Mercedes-Benz de VIDISA alineados en el Puerto San Vicente, listos para operar"
+              loading="lazy">
+            <figcaption class="fleet-feature__caption">
+              <span class="fleet-feature__tag">La flota en operación</span>
+              <h3 class="fleet-feature__title">Mercedes-Benz · Todos los días en puerto.</h3>
+              <p class="fleet-feature__text">Nuestros camiones operando en el Puerto San Vicente. La misma rigurosidad y disciplina que tres generaciones nos enseñaron.</p>
+            </figcaption>
+          </figure>
         </div>
 
         <!-- Puertos de cobertura -->
@@ -577,7 +577,7 @@
 
       <div class="site-footer__bottom">
         <p>© <span id="year">2026</span> VIDISA Transportes y Servicios Ltda. — Todos los derechos reservados.</p>
-        <p class="site-footer__est">EST. 2024 · III GENERACIÓN</p>
+        <p class="site-footer__est">III GENERACIÓN · BIOBÍO</p>
       </div>
     </div>
   </footer>
