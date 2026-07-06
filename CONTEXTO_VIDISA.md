@@ -263,10 +263,15 @@ vidisa-web/
 │   └── images/
 │       ├── puerto-san-vicente.jpg (large)
 │       ├── puerto-san-vicente-medium.jpg
-│       ├── camiones-frontal.jpg
-│       ├── camiones-frontal-medium.jpg
+│       ├── flota-camiones.jpg (3 camiones en patio — sección Flota)
+│       ├── flota-camiones-medium.jpg
+│       ├── og-vidisa.jpg (1200×630 — vista previa WhatsApp/redes)
 │       ├── operacion-puerto-large.jpg
-│       └── operacion-puerto-medium.jpg
+│       ├── operacion-puerto-medium.jpg
+│       ├── camiones-frontal.jpg (⚠️ contiene el logo, no una foto — sin uso, se puede borrar)
+│       └── camiones-frontal-medium.jpg (⚠️ ídem)
+├── robots.txt
+├── sitemap.xml
 ├── BRIEF.md
 └── README.md
 ```

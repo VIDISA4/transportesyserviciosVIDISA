@@ -110,6 +110,35 @@ button {
   color: var(--white);
 }
 
+/* Foco visible para navegación por teclado */
+:focus-visible {
+  outline: 2px solid var(--vidisa-red);
+  outline-offset: 3px;
+}
+
+/* Las anclas quedan bajo el header fijo incluso sin JS */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* ===================== SKIP LINK ===================== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.75rem 1.25rem;
+  background: var(--vidisa-red);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
 /* ===================== UTILITIES ===================== */
 .container {
   max-width: var(--container-max);
@@ -157,6 +186,7 @@ button {
   letter-spacing: -0.025em;
   color: var(--black);
   font-variation-settings: "opsz" 96;
+  text-wrap: balance;
 }
 
 .section-title em {
@@ -374,6 +404,7 @@ button {
   color: var(--black);
   margin: 1.5rem 0 1.5rem;
   font-variation-settings: "opsz" 96;
+  text-wrap: balance;
   animation: fadeUp 0.8s var(--transition-slow) backwards;
 }
 
@@ -848,6 +879,7 @@ button {
   color: var(--paper);
   margin: 1rem 0 1.25rem;
   font-variation-settings: "opsz" 96;
+  text-wrap: balance;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -1398,6 +1430,120 @@ button {
   font-size: 1.125rem;
 }
 
+/* ===================== COTIZADOR WHATSAPP ===================== */
+.quote-form {
+  background: var(--paper);
+  border: 1px solid var(--gray-100);
+  border-top: 3px solid var(--vidisa-red);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.quote-form__head {
+  margin-bottom: var(--space-md);
+}
+
+.quote-form__title {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: -0.01em;
+}
+
+.quote-form__hint {
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  margin-top: 0.25rem;
+  max-width: 52ch;
+}
+
+.quote-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-field__label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vidisa-red);
+}
+
+.form-field__label span {
+  color: var(--gray-500);
+  letter-spacing: 0.08em;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--black-soft);
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 0;
+  padding: 0.75rem 0.875rem;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: var(--gray-500);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--gray-500);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 3.25rem;
+}
+
+.quote-form__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.quote-form__submit {
+  font-size: 0.9375rem;
+  padding: 0.875rem 1.75rem;
+}
+
+.quote-form__note {
+  font-size: 0.8125rem;
+  color: var(--gray-500);
+  max-width: 34ch;
+}
+
+.contact__alt {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: var(--space-sm);
+}
+
 /* ===================== FOOTER ===================== */
 .site-footer {
   background: var(--black);
@@ -1559,6 +1705,18 @@ button {
 
   .contact__methods {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quote-form {
+    padding: var(--space-xl);
+  }
+
+  .quote-form__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-field--full {
+    grid-column: 1 / -1;
   }
 
   /* Port Feature — desktop layout */

@@ -7,18 +7,13 @@
 
   // ===================== STICKY HEADER =====================
   const header = document.getElementById('header');
-  let lastScroll = 0;
 
   function handleHeaderScroll() {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 20) {
+    if (window.pageYOffset > 20) {
       header.classList.add('is-scrolled');
     } else {
       header.classList.remove('is-scrolled');
     }
-
-    lastScroll = currentScroll;
   }
 
   // ===================== MOBILE NAV =====================
@@ -109,6 +104,40 @@
       });
     });
   });
+
+  // ===================== COTIZADOR WHATSAPP =====================
+  const quoteForm = document.getElementById('quoteForm');
+  const WHATSAPP_NUMBER = '56961258314';
+
+  function buildQuoteMessage(form) {
+    const val = (name) => (form.elements[name] ? form.elements[name].value.trim() : '');
+
+    let fecha = val('fecha');
+    if (fecha) {
+      const [y, m, d] = fecha.split('-');
+      fecha = d + '-' + m + '-' + y;
+    }
+
+    const lines = ['Hola VIDISA, quiero cotizar un traslado.'];
+    if (val('contenedor')) lines.push('• Contenedor: ' + val('contenedor'));
+    if (val('origen')) lines.push('• Origen: ' + val('origen'));
+    if (val('destino')) lines.push('• Destino: ' + val('destino'));
+    if (fecha) lines.push('• Fecha estimada: ' + fecha);
+    if (val('empresa')) lines.push('• Empresa: ' + val('empresa'));
+    if (val('comentario')) lines.push('• Comentario: ' + val('comentario'));
+
+    return lines.join('\n');
+  }
+
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const url =
+        'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(buildQuoteMessage(quoteForm));
+      const win = window.open(url, '_blank', 'noopener');
+      if (!win) window.location.href = url; // popup bloqueado
+    });
+  }
 
   // ===================== DYNAMIC YEAR =====================
   const yearEl = document.getElementById('year');

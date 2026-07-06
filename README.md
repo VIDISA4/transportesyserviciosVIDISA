@@ -14,13 +14,17 @@ vidisa-web/
 ├── css/
 │   └── styles.css       ← Estilos completos del sitio
 ├── js/
-│   └── main.js          ← Smooth scroll, sticky header, mobile nav, scroll reveals
+│   └── main.js          ← Smooth scroll, sticky header, mobile nav, scroll reveals, cotizador WhatsApp
 ├── assets/
 │   ├── logos/
-│   │   ├── vidisa-logo-horizontal.png  ← Logo principal (header y footer)
-│   │   ├── vidisa-isotipo.png          ← Isotipo (hero, favicon)
-│   │   └── vidisa-truck-only.png       ← Solo el camión (decorativo)
-│   └── images/                          ← (Para fotos reales del camión a futuro)
+│   │   ├── vidisa-logo-horizontal.png      ← Logo original en alta (fuente; no se carga en el sitio)
+│   │   ├── vidisa-logo-horizontal-nav.png  ← Logo optimizado para header y footer (7 KB)
+│   │   ├── vidisa-isotipo.png              ← Isotipo original en alta (fuente; no se carga en el sitio)
+│   │   ├── vidisa-isotipo-hero.png         ← Isotipo optimizado para el hero (43 KB)
+│   │   ├── favicon-192.png                 ← Favicon 192×192
+│   │   ├── apple-touch-icon.png            ← Ícono iOS 180×180 (fondo papel)
+│   │   └── vidisa-truck-only.png           ← Solo el camión (decorativo, sin uso)
+│   └── images/                              ← Fotos reales (puerto, flota, OG)
 ├── BRIEF.md             ← Brief estratégico completo (contexto para Claude Code)
 └── README.md            ← Este archivo
 ```
@@ -83,9 +87,9 @@ En vez de pedir todo de una, ve sección por sección:
 - **Crema:** `#f5efe5` (fondos alternados)
 
 ### Tipografía
-- **Display:** [Fraunces](https://fonts.google.com/specimen/Fraunces) — serif editorial con carácter, evoca tradición
-- **Cuerpo:** [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans) — técnica, industrial
-- **Mono:** [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) — para detalles técnicos
+- **Display:** [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) — industrial con carácter, peso, autoridad
+- **Cuerpo:** [Inter](https://fonts.google.com/specimen/Inter) — legible, profesional, neutra
+- **Mono:** [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — para números, etiquetas, eyebrows
 
 ### Aproximación estética
 **Editorial / Industrial Heritage** — secciones numeradas (01, 02, 03...), tipografía editorial, paleta cálida, contraste con sección oscura para los valores.
@@ -144,8 +148,10 @@ En vez de pedir todo de una, ve sección por sección:
 - [ ] Validar HTML (validator.w3.org)
 - [ ] Test de Lighthouse (objetivo: >90 en todas las categorías)
 - [ ] Configurar Google Search Console
-- [ ] Crear y subir `sitemap.xml` y `robots.txt`
+- [x] Crear y subir `sitemap.xml` y `robots.txt`
 - [ ] Configurar Google Business Profile para SEO local
+
+> **⚠️ Pendiente al publicar:** las URLs absolutas del sitio (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD, `sitemap.xml` y `robots.txt`) apuntan a `https://vidisa.cl/`. La vista previa al compartir por WhatsApp solo funcionará cuando ese dominio esté activo. Si el sitio se publica primero en GitHub Pages o con otro dominio, hay que reemplazar `https://vidisa.cl/` por la URL real en `index.html`, `sitemap.xml` y `robots.txt`.
 
 ---
 
